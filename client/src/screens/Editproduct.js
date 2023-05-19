@@ -130,7 +130,7 @@ export default function Editproduct({ match }) {
               type="submit"
               style={{ float: "left" }}
             >
-              Edit Product
+              Save Product
             </button>
           </form>
         </div>

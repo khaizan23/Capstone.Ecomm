@@ -59,7 +59,7 @@ export default function Cartscreen() {
                      <hr/>
 
 
-                     <h2 className='text-center'>SubTotal : {subtotal} ₱</h2>
+                     <h2 className='text-center'>SubTotal : ₱ {subtotal}</h2>
 
                      <hr/>
 

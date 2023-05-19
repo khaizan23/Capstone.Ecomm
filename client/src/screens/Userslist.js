@@ -41,7 +41,7 @@ export default function Userslist() {
                             <td>{user._id}</td>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
-                            <td><i class="far fa-trash-alt" onClick={()=>{dispatch(deleteUser(user._id))}}></i></td>
+                            <td><i className="far fa-trash-alt" onClick={()=>{dispatch(deleteUser(user._id))}}></i></td>
                         </tr>
                     }))}
                 </tbody>

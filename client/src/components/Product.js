@@ -19,7 +19,7 @@ export default function Product({ product }) {
             readonly={true}
           />
 
-          <h1>Price : {product.price}</h1>
+          <h1>Price : ₱ {product.price}</h1>
         </Link>
         <div></div>
       </div>

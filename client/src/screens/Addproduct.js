@@ -90,12 +90,19 @@ export default function Addproduct() {
               type="text"
               required
               className="form-control mb-2 mr-sm-2"
-              placeholder="category"
+              placeholder="Add/Select category"
+              list="categoryOptions"
               value={category}
               onChange={(e) => {
                 setcategory(e.target.value);
               }}
             />
+            <datalist id="categoryOptions">
+              <option value="Electronics" />
+              <option value="Fashion" />
+              <option value="Mobiles" />
+              <option value="Games" />
+            </datalist>
             <input
               type="number"
               required
@@ -104,7 +111,7 @@ export default function Addproduct() {
               value={countinstock === 0 ? "" : countinstock}
               onChange={(e) => {
                 const value = parseInt(e.target.value);
-                if (!isNaN(value)) {
+                if (!isNaN(value) && value >= 0) {
                   setcountinstock(value);
                 } else {
                   setcountinstock(0);

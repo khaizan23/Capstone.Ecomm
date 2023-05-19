@@ -36,10 +36,10 @@ export default function Checkout({amount}) {
             
             <StripeCheckout
             token={tokenHandler}
-            amount={amount*100}
+            amount={amount*10}
             shippingAddress
-            currency='INR'
-            stripeKey='pk_test_51IYnC0SIR2AbPxU0TMStZwFUoaDZle9yXVygpVIzg36LdpO8aSG8B9j2C0AikiQw2YyCI8n4faFYQI5uG3Nk5EGQ00lCfjXYvZ'
+            currency='USD'
+            stripeKey='pk_test_51N9ItDKum07ihyc0usmwKVj2R5QYy1uwaZsJt7aZ3UwssdR0XqT3AFtT5qcDCgDvUhjVT86QpBZe2hMH4syW12vg001yobJ8Uf'
             >
 
             <button className="btn" onClick={validate}>PAY NOW</button>

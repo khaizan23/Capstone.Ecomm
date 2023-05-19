@@ -1,20 +1,19 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../actions/userActions";
+import logo from "../logo/logonav.png"
 export default function Navbar() {
+
   const cartreducer = useSelector((state) => state.cartReducer);
-
   const { cartItems } = cartreducer;
-
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-
   const dispatch = useDispatch()
 
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
-        <a className="navbar-brand" href="/">
-          SHEY SHOP
+        <a className="navbar-brand" href="/">Welcome to 
+        <img src={logo} alt="Logo" className="logo-image" />
         </a>
         <button
           className="navbar-toggler"
@@ -30,7 +29,7 @@ export default function Navbar() {
 
 
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse mr-5" id="navbarNav">
           <div className="navbar-nav ml-auto">
             {currentUser ? (
               <div class="dropdown">
@@ -56,7 +55,7 @@ export default function Navbar() {
                     Orders
                   </a>
                   <li className="dropdown-item" onClick={()=>{dispatch(logoutUser())}}>
-                    Logout <i class="fas fa-sign-out-alt"></i>
+                    Logout <i className="fas fa-sign-out-alt"></i>
                   </li>
                 </div>
               </div>

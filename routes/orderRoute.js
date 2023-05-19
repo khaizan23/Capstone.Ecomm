@@ -1,7 +1,7 @@
 const {v4 : uuidv4} = require('uuid')
 const express = require("express");
 const router = express.Router();
-const stripe = require("stripe")("sk_test_51IYnC0SIR2AbPxU0EiMx1fTwzbZXLbkaOcbc2cXx49528d9TGkQVjUINJfUDAnQMVaBFfBDP5xtcHCkZG1n1V3E800U7qXFmGf")
+const stripe = require("stripe")("sk_test_51N9ItDKum07ihyc0ciVGrj7u9fzVgMBLCJy7jPj0ILpu0e6mv4oGojVEXjm5Zw89ibT9fIMY8zGNCRcJEqQ9eyWT00Px2a3znv")
 const Order = require('../models/orderModel')
 router.post("/placeorder", async(req, res) => {
 
@@ -13,8 +13,8 @@ router.post("/placeorder", async(req, res) => {
     })
 
     const payment = await stripe.charges.create({
-          amount : subtotal*100 , 
-          currency : 'inr' , 
+          amount : subtotal*10 , 
+          currency : 'USD' , 
           customer : customer.id , 
           receipt_email : token.email
     } , {
@@ -43,17 +43,14 @@ router.post("/placeorder", async(req, res) => {
 
         })
 
-        order.save(err=>{
+        order.save()
+  .then(() => {
+    res.send('Order Placed Successfully');
+  })
+  .catch(err => {
+    res.status(400).json({ message: 'Something went wrong' });
+  });
 
-            if(err)
-            {
-                return res.status(400).json({ message: 'Something went wrong' });
-            }
-            else{
-                res.send('Order Placed Successfully')
-            }
-
-        })
     }
     else{
         return res.status(400).json({ message: 'Payment failed' });
@@ -81,16 +78,17 @@ router.post("/getorderbyid", (req, res) => {
 
     const orderid = req.body.orderid
 
-    Order.find({_id: orderid} , (err , docs)=>{
-
-        if(err){
-            return res.status(400).json({ message: 'something went wrong' });
-        }
-        else{
-            res.send(docs[0])
-        }
-
+    Order.find({_id: orderid})
+    .then(docs => {
+      if (docs.length > 0) {
+        res.send(docs[0]);
+      } else {
+        return res.status(404).json({ message: 'Order not found' });
+      }
     })
+    .catch(error => {
+      res.status(400).json({ message: 'Something went wrong' });
+    });
   
 });
 

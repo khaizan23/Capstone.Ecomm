@@ -38,7 +38,9 @@ export default function Productdescscreen({ match }) {
                 <b>{product.name}</b>
               </h1>
               <hr/>
-              <img src={product.image} className="img-fluid m-3 bigimg" />
+              <div className="img-container">
+              <img src={product.image} className="img-fluid m-3 bigimg" style={{ width: 'auto', height: 'auto%'}} />
+              </div>
               <p>{product.description}</p>
             </div>
           </div>
