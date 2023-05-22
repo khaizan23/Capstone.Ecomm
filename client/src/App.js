@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter , Route} from 'react-router-dom'
-import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import {BrowserRouter , Route} from 'react-router-dom';
+// import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
+import Carousel from './components/Carousel';
 import Homescreen from './screens/Homescreen';
 import Productdescscreen from './screens/Productdescscreen';
 import Cartscreen from './screens/Cartscreen';
@@ -13,12 +15,15 @@ import Orderinfo from './screens/Orderinfo';
 import Profilescreen from './screens/Profilescreen';
 import Adminscreen from './screens/Adminscreen';
 import Editproduct from './screens/Editproduct';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
 
         <Navbar/>
+
+        <Carousel/>
 
         <BrowserRouter>
 
@@ -42,6 +47,8 @@ function App() {
            
 
         </BrowserRouter>
+
+        <Footer/>
 
        
         

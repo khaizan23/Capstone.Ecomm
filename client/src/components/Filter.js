@@ -9,10 +9,11 @@ export default function Filter() {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <div className="row justify-content-center shadow p-3 mb-5 bg-white rounded">
+    <div className="left-side-container ml-5">
+      <div className="col justify-content-start shadow p-3 bg-white rounded">
         <div className="col-md-3 ml-2" style={{marginTop:'13px'}}>
           <input
+            style={{width: "auto"}}
             value={searchkey}
             onChange={(e) => {
               setsearchkey(e.target.value);
@@ -25,6 +26,7 @@ export default function Filter() {
 
         <div className="col-md-2 mt-4 ml-2">
           <select
+          style={{width: "auto"}}
             className="form-control"
             value={sort}
             onChange={(e) => {
@@ -39,6 +41,7 @@ export default function Filter() {
 
         <div className="col-md-2 mt-4 ml-2">
           <select
+          style={{width: "auto"}}
             className="form-control"
             value={category}
             onChange={(e) => {
