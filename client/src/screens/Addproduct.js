@@ -9,7 +9,7 @@ export default function Addproduct() {
   const [name, setname] = useState("");
   const [price, setprice] = useState();
   const [countinstock, setcountinstock] = useState();
-  const [imageurl, setimageurl] = useState("");
+  const [imageurl, setimageurl] = useState(null);
   const [category, setcategory] = useState("");
   const [description, setdescription] = useState("");
   const dispatch = useDispatch();
@@ -17,6 +17,22 @@ export default function Addproduct() {
   const addproductstate = useSelector((state) => state.addProductReducer);
 
   const { success, error, loading } = addproductstate;
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    convertToBase64(file)
+      .then((base64String) => setimageurl(base64String))
+      .catch((error) => console.log("Error converting image:", error));
+  };
+
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
 
   const addproduct = (e) => {
     e.preventDefault();
@@ -77,14 +93,12 @@ export default function Addproduct() {
               }}
             />
             <input
-              type="text"
+              type="file"
               required
               className="form-control mb-2 mr-sm-2"
               placeholder="imageurl"
-              value={imageurl}
-              onChange={(e) => {
-                setimageurl(e.target.value);
-              }}
+              // value={imageurl}
+              onChange={handleImageUpload}
             />
             <input
               type="text"
