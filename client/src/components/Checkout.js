@@ -39,7 +39,7 @@ export default function Checkout({amount}) {
             amount={amount*10}
             shippingAddress
             currency='USD'
-            stripeKey='pk_test_51N9ItDKum07ihyc0usmwKVj2R5QYy1uwaZsJt7aZ3UwssdR0XqT3AFtT5qcDCgDvUhjVT86QpBZe2hMH4syW12vg001yobJ8Uf'
+            stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >
 
             <button className="btn" onClick={validate}>PAY NOW</button>

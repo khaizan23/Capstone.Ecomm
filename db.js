@@ -1,6 +1,7 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 
-var mongoDBURL = 'mongodb://127.0.0.1:27017/capstone-Ecomm'
+var mongoDBURL = process.env.MONGODB_URL;
 
 
 mongoose.connect(mongoDBURL , {useUnifiedTopology:true , useNewUrlParser:true})
