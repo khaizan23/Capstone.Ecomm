@@ -39,6 +39,22 @@ export default function Editproduct({ match }) {
     }
   }, [dispatch, product]);
 
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    convertToBase64(file)
+      .then((base64String) => setimageurl(base64String))
+      .catch((error) => console.log("Error converting image:", error));
+  };
+
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
   function editproduct(e) {
     e.preventDefault();
     const updatedproduct = {
@@ -96,14 +112,15 @@ export default function Editproduct({ match }) {
               }}
             />
             <input
-              type="text"
+              type="file"
               required
               className="form-control mb-2 mr-sm-2"
               placeholder="imageurl"
-              value={imageurl}
-              onChange={(e) => {
-                setimageurl(e.target.value);
-              }}
+              // value={imageurl}
+              // onChange={(e) => {
+              //   setimageurl(e.target.value);
+              // }}
+              onChange={handleImageUpload}
             />
             <input
               type="text"

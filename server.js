@@ -10,6 +10,8 @@ const path = require('path');
 app.use('/api/products/' , productsRoute)
 app.use('/api/users/',userRoute)
 app.use('/api/orders/',orderRoute)
+app.use(bodyParser.json({ limit: "10mb" }));
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 
     if(process.env.NODE_ENV === 'production')

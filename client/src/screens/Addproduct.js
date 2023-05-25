@@ -112,10 +112,10 @@ export default function Addproduct() {
               }}
             />
             <datalist id="categoryOptions">
-              <option value="Electronics" />
-              <option value="Fashion" />
+              <option value="Laptops" />
+              <option value="Jeans" />
               <option value="Mobiles" />
-              <option value="Games" />
+              <option value="Shoes" />
             </datalist>
             <input
               type="number"

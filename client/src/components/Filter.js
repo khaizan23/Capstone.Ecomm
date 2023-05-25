@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { filterProducts } from "../actions/productActions";
 export default function Filter() {
@@ -7,6 +7,11 @@ export default function Filter() {
   const [category, setcategory] = useState("all");
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Trigger the filter action when filter criteria change
+    dispatch(filterProducts(searchkey, sort, category));
+  }, [searchkey, sort, category, dispatch]);
 
   return (
     <div className="left-side-container ml-5">
@@ -49,10 +54,10 @@ export default function Filter() {
             }}
           >
             <option value="all">All</option>
-            <option value="electronics">Electronics</option>
-            <option value="fashion">fashion</option>
+            <option value="laptops">Laptops</option>
+            <option value="jeans">Jeans</option>
             <option value="mobiles">Mobiles</option>
-            <option value="games">Games</option>
+            <option value="shoes">Men Shoes</option>
           </select>
         </div>
 

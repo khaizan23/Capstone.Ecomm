@@ -32,6 +32,7 @@ export default function Orderslist() {
                         <th>Amount</th>
                         <th>Date</th>
                         <th>Transaction Id</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
 
@@ -44,6 +45,9 @@ export default function Orderslist() {
                                 <td>{order.orderAmount}</td>
                                 <td>{order.createdAt}</td>
                                 <td>{order.transactionId}</td>
+                                <td>
+                                  <button style={{marginRight:'10px'}}> <i className="far fa-eye fa-bounce"></i> view details</button>
+                              </td>
                             </tr>
                         }))}
                     </tbody>
