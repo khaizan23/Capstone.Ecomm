@@ -6,9 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import 'bootstrap/dist/js/bootstrap.js'
 import store from './store'
-import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
-if (process.env.NODE_ENV === 'production') disableReactDevTools()
 ReactDOM.render(
   <Provider store={store}>
     <App />

@@ -11,7 +11,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm i"
   },
   "author": "khaizan",
   "license": "ISC",
