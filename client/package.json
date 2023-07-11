@@ -52,7 +52,8 @@
     ]
   },
   
-  "proxy": "https://capstoneproj-vuqy.onrender.com/"
+  
+  "proxy": "http://localhost:8000/"
 }
 
 

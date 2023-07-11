@@ -31,5 +31,6 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 const port = process.env.PORT || 8000;
 // "proxy": "http://localhost:8000/"
+// "proxy": "https://capstoneproj-vuqy.onrender.com/"
 
 app.listen(port, () => console.log(`Node JS Server Started`));
