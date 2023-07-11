@@ -26,23 +26,23 @@ function App() {
 
         <BrowserRouter>
 
-           <Route path='https://kodecaps.netlify.app/login' component={Homescreen} exact/>
+           <Route path='/' component={Homescreen} exact/>
 
-           <Route path='https://kodecaps.netlify.app/product/:id' component={Productdescscreen}/>
+           <Route path='/product/:id' component={Productdescscreen}/>
 
-           <Route path='https://kodecaps.netlify.app/cart' component={Cartscreen}/>
+           <Route path='/cart' component={Cartscreen}/>
 
-           <Route path='https://kodecaps.netlify.app/register' component={Registerscreen} />
+           <Route path='/register' component={Registerscreen} />
 
-           <Route path='https://kodecaps.netlify.app/login' component={Loginscreen} />
+           <Route path='/login' component={Loginscreen} />
 
-           <Route path='https://kodecaps.netlify.app/orders'component={Ordersscreen}/>
+           <Route path='/orders'component={Ordersscreen}/>
 
-           <Route path='https://kodecaps.netlify.app/orderinfo/:orderid' component={Orderinfo} />
+           <Route path='/orderinfo/:orderid' component={Orderinfo} />
 
-           <Route path='https://kodecaps.netlify.app/profile' component={Profilescreen} />
+           <Route path='/profile' component={Profilescreen} />
 
-           <Route path='https://kodecaps.netlify.app/admin' component={Adminscreen}/>
+           <Route path='/admin' component={Adminscreen}/>
            
 
         </BrowserRouter>
