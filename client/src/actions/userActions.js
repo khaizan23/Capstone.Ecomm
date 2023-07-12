@@ -52,7 +52,7 @@ export const logoutUser = ()=>dispatch=>{
 
        dispatch({type : 'USER_LOGOUT'})
 
-       window.location.href='https://kodecaps.onrender.com/login'
+       window.location.href='https://capstoneproj-vuqy.onrender.com/login'
 
 
 }

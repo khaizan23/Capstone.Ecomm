@@ -34,7 +34,7 @@ function App() {
 
            <Route path='/register' component={Registerscreen} />
 
-           <Route path='https://kodecaps.onrender.com/login' component={Loginscreen} />
+           <Route path='https://capstoneproj-vuqy.onrender.com/login' component={Loginscreen} />
 
            <Route path='/orders'component={Ordersscreen}/>
 

@@ -104,7 +104,7 @@ export default function Registerscreen() {
               
             
           </div>
-          <a style={{color: 'black'}} href="https://kodecaps.onrender.com/login" className='m-3'>Click Here To Login</a>
+          <a style={{color: 'black'}} href="https://capstoneproj-vuqy.onrender.com/login" className='m-3'>Click Here To Login</a>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ export default function Ordersscreen() {
     if (localStorage.getItem("currentUser")) {
       dispatch(getOrdersByUserId());
     } else {
-      window.location.href = "https://kodecaps.onrender.com/login";
+      window.location.href = "https://capstoneproj-vuqy.onrender.com/login";
     }
   }, [dispatch]);
 
