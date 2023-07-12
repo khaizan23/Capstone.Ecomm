@@ -38,7 +38,7 @@ export default function Review({product}) {
             }
         }
         else{
-            window.location.href ='/login'
+            window.location.href ='https://kodecaps.onrender.com/login'
         }
 
         

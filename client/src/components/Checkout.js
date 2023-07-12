@@ -21,7 +21,7 @@ export default function Checkout({amount}) {
     {
         if(!localStorage.getItem('currentUser'))
         {
-             window.location.href ='/login'
+             window.location.href ='https://kodecaps.onrender.com/login'
         }
     }
 
