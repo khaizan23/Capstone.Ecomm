@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
         app.get('*' , (req,res)=>{
 
-            res.sendFile(path.resolve(__dirname , ''))
+            res.sendFile(path.resolve(__dirname , 'client/build/index.html'))
 
         })
 
