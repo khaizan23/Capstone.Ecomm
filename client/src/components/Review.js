@@ -38,7 +38,7 @@ export default function Review({product}) {
             }
         }
         else{
-            window.location.href ='https://kodecaps.onrender.com/login'
+            window.location.href ='https://capstoneproj-vuqy.onrender.com/login'
         }
 
         
