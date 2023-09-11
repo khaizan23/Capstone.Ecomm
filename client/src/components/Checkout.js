@@ -21,7 +21,7 @@ export default function Checkout({amount}) {
     {
         if(!localStorage.getItem('currentUser'))
         {
-             window.location.href ='https://capstoneproj-vuqy.onrender.com/login'
+             window.location.href ='/login'
         }
     }
 

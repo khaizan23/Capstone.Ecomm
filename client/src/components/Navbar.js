@@ -61,7 +61,7 @@ export default function Navbar() {
               </div>
             ) : (
               <li className="nav-item">
-                <a className="nav-link" href="https://capstoneproj-vuqy.onrender.com/login">
+                <a className="nav-link" href="/login">
                   Login
                 </a>
               </li>

@@ -14,7 +14,7 @@ const finalReducer = combineReducers({
    registerNewUserReducer : registerNewUserReducer,
    loginReducer : loginReducer,
    placeOrderReducer : placeOrderReducer,
-   getProductByIdReducer : getProductByIdReducer,
+  //  getProductByIdReducer : getProductByIdReducer,
    getOrdersByUserIdReducer : getOrdersByUserIdReducer,
    getOrderByIdReducer : getOrderByIdReducer,
    addProductReviewReducer : addProductReviewReducer,

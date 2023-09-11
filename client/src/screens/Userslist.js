@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { deleteUser, getAllUsers } from '../actions/userActions'
 import Loader from '../components/Loader'

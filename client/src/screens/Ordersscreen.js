@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getOrdersByUserId } from "../actions/orderActions";
 import Loader from "../components/Loader";
 import Error from '../components/Error'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 export default function Ordersscreen() {
 
   const orderstate=useSelector(state=>state.getOrdersByUserIdReducer)
@@ -15,7 +15,7 @@ export default function Ordersscreen() {
     if (localStorage.getItem("currentUser")) {
       dispatch(getOrdersByUserId());
     } else {
-      window.location.href = "https://capstoneproj-vuqy.onrender.com/login";
+      window.location.href = "/login";
     }
   }, [dispatch]);
 

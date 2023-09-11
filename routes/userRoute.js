@@ -38,7 +38,7 @@ router.post("/register", (req, res) => {
 });
 
 
-router.post("https://capstoneproj-vuqy.onrender.com/login", (req, res) => {
+router.post("/login", (req, res) => {
 
     User.find({ email: req.body.email, password: req.body.password })
   .then(docs => {
